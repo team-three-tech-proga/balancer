@@ -1,15 +1,30 @@
 {
   "name": "team-three-tech-proga",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && vite build",
+    "prepare": "husky install",
+    "lint": "eslint --ext .js,.ts, ."
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^5.0.0"
-  }
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "glob": "^10.3.10",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0",
+    "style-loader": "^3.3.3",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.4"
+  },
+  "sideEffect": false
 }
